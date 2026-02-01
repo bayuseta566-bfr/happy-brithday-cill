@@ -1,0 +1,410 @@
+* {
+    font-family: 'Segoe UI', sans-serif;
+    box-sizing: border-box;
+}
+
+.pink-bg {
+    background: #ffd6e8;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* HALAMAN 1 */
+.container {
+    background: #fff0f6;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 320px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #ff5c8a;
+}
+
+input[type="password"], input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ffb3c6;
+}
+
+button {
+    background: #ed0f7e;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff3366;
+}
+
+.help-wrapper {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    text-align: left;
+    z-index: 999;
+    max-width: 220px;
+}
+
+#helpBtn {
+    background: transparent;
+    border: 2px dashed #ff8fb1;
+    padding: 6px 14px;
+    border-radius: 18px;
+    color: #ff5c8a;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+#helpBtn:hover {
+    background: #ffedf3;
+}
+
+#hintText {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #4a2c35;
+    line-height: 1.4;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* FRAME FOTO */
+.photo-frame {
+    width: 180px;
+    height: 180px;
+    border: 6px solid #ff9ebb;
+    border-radius: 20px;
+    margin: 15px auto;
+    overflow: hidden;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* HALAMAN MENU */
+.menu-container {
+    background: #fff0f6;
+    padding: 30px;
+    border-radius: 20px;
+    width: 350px;
+    text-align: center;
+}
+
+.menu-box {
+    display: block;
+    background: #ffb3c6;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* KUE ULANG TAHUN */
+.cake {
+    margin-top: 30px;
+    position: relative;
+}
+
+.layer {
+    width: 120px;
+    height: 40px;
+    background: #ff8fab;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.layer-middle {
+    width: 160px;
+    background: #ff5c8a;
+}
+
+.layer-top {
+    width: 200px;
+    background: #ff3366;
+}
+
+.candle {
+    width: 10px;
+    height: 40px;
+    background: rgb(226, 158, 10);
+    margin: 0 auto;
+    animation: flame 1s infinite alternate;
+}
+
+@keyframes flame {
+    from { opacity: 1; }
+    to { opacity: 0.4; }
+}
+
+.pink-bg {
+    background-color: #ffd6e8;
+    background-image:
+        radial-gradient(circle at 10px 10px, #ff9ebb 3px, transparent 3px),
+        radial-gradient(circle at 30px 30px, #ff9ebb 3px, transparent 3px);
+    background-size: 40px 40px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* HALAMAN KUE ULANG TAHUN */
+.cake-page {
+    background: #fff0f6;
+    padding: 40px;
+    border-radius: 25px;
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.cake-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: #ff5c8a;
+    margin-bottom: 5px;
+}
+
+.cake-subtitle {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    color: #7a3b4a;
+    margin-bottom: 30px;
+}
+
+/* PIXEL CAKE */
+.pixel-cake {
+    position: relative;
+    margin: 0 auto 30px;
+    width: 200px;
+}
+
+/* LILIN ANGKA 21 */
+.candle {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.num {
+    width: 20px;
+    height: 35px;
+    background: #ffcc00;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.flame {
+    position: absolute;
+    top: -20px;
+    animation: flicker 1s infinite alternate;
+}
+
+@keyframes flicker {
+    from { transform: scale(1); }
+    to { transform: scale(1.2); }
+}
+
+/* TINGKAT KUE */
+.tier {
+    margin: 0 auto;
+    background: #ff8fab;
+    border: 4px solid #ff5c8a;
+    image-rendering: pixelated;
+}
+
+.tier-top {
+    width: 90px;
+    height: 35px;
+}
+
+.tier-mid {
+    width: 130px;
+    height: 40px;
+}
+
+.tier-bottom {
+    width: 170px;
+    height: 45px;
+}
+
+/* TEKS */
+.cake-text {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    color: #4a2c35;
+    line-height: 1.8;
+}
+
+
+
+.btn-next:hover {
+    transform: scale(1.08);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* ANIMASI HALUS */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffb3c6, #ffd6e8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.intro {
+    text-align: center;
+}
+
+.countdown {
+    font-size: 80px;
+    font-weight: bold;
+    color: rgb(3, 0, 0);
+    animation: pop 1s ease;
+}
+
+.text {
+    margin-top: 20px;
+    font-size: 36px;
+    font-weight: 600;
+    color: rgb(23, 0, 0);
+}
+
+.word {
+    opacity: 0;
+    animation: fadeIn 0.6s forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes pop {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* ===== BACKGROUND EFFECT ===== */
+.hearts span,
+.ribbons span,
+.gifts span {
+  position: absolute;
+  animation: float 8s linear infinite;
+  opacity: 0.8;
+}
+
+/* Love */
+.hearts span {
+  font-size: 24px;
+  color: rgba(255,255,255,0.9);
+}
+
+/* Ribbon */
+.ribbons span {
+  font-size: 20px;
+}
+
+/* Gift */
+.gifts span {
+  font-size: 26px;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% { opacity: 1; }
+  100% {
+    transform: translateY(-10vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+.hearts, .ribbons, .gifts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#countdown,
+#birthday-text {
+  z-index: 5;
+  position: relative;
+}
+
+.title {
+  font-family: 'Sacramento', cursive;
+  font-size: 48px;
+}
+
+p, .content {
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+/* TOMBOL NAVIGASI BAWAH */
+.nav-bottom {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 99;
+}
+
+.nav-bottom button {
+    background: linear-gradient(135deg, #ff8fb1, #ffc2d1);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(255, 143, 177, 0.4);
+    transition: 0.3s;
+}
+
+.nav-bottom button:hover {
+    transform: scale(1.05);
+}

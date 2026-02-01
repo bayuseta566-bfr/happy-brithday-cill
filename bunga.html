@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jar of Wishes🎀</title>
+
+    <link rel="stylesheet" href="bunga.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<button class="back-btn" onclick="back()">← kembali</button>
+
+<script>
+function back() {
+    window.location.href = "menu.html"; 
+}
+</script>
+
+<div class="page">
+    <h1 class="title">Jar of Wishes ✨</h1>
+    <p class="subtitle">Pilih satu gulungan, dan bacalah dengan hati</p>
+
+    <div class="jar-container">
+       <div class="jar">
+    <div class="paper" onclick="openWish(0)">📜</div>
+    <div class="paper" onclick="openWish(1)">📜</div>
+    <div class="paper" onclick="openWish(2)">📜</div>
+    <div class="paper" onclick="openWish(3)">📜</div>
+    <div class="paper" onclick="openWish(4)">📜</div>
+
+    <!-- TAMBAHAN -->
+    <div class="paper" onclick="openWish(5)">📜</div>
+    <div class="paper" onclick="openWish(6)">📜</div>
+    <div class="paper" onclick="openWish(7)">📜</div>
+    <div class="paper" onclick="openWish(8)">📜</div>
+    <div class="paper" onclick="openWish(9)">📜</div>
+</div>
+    </div>
+
+    <div class="wish-box hidden" id="wishBox">
+        <p id="wishText"></p>
+        <button onclick="closeWish()">Tutup 💖</button>
+    </div>
+</div>
+
+<script src="bunga.js"></script>
+</body>
+</html>

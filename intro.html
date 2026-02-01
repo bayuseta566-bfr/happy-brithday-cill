@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday 🎉</title>
+    <link rel="stylesheet" href="css ultah.css">
+    <link rel="stylesheet" href="global.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<audio id="birthdaySong" loop>
+  <source src="monokrom.mp3" type="audio/mpeg">
+</audio>
+
+<div class="intro">
+    <!-- Background Animations -->
+<div class="hearts"></div>
+<div class="ribbons"></div>
+<div class="gifts"></div>
+    <div id="countdown" class="countdown">3</div>
+    <script>
+function createFloating(element, emoji, count) {
+  for (let i = 0; i < count; i++) {
+    const span = document.createElement("span");
+    span.innerText = emoji;
+    span.style.left = Math.random() * 100 + "vw";
+    span.style.animationDuration = (5 + Math.random() * 5) + "s";
+    span.style.animationDelay = Math.random() * 5 + "s";
+    element.appendChild(span);
+  }
+}
+
+createFloating(document.querySelector(".hearts"), "💖", 20);
+createFloating(document.querySelector(".ribbons"), "🎀", 12);
+createFloating(document.querySelector(".gifts"), "🎁", 10);
+</script>
+
+    <div id="text" class="text"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+setTimeout(() => {
+  confetti({
+    particleCount: 150,
+    spread: 80,
+    origin: { y: 0.6 }
+  });
+}, 3500);
+</script>
+
+
+<script src="intro.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffd6e8; /* soft pink */
+}
+
+/* TEKS */
+.cake-text {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    color: #4a2c35;
+    line-height: 1.8;
+}
+/* HALAMAN UCAPAN */
+.wish-container {
+    background: #fff0f6;
+    padding: 30px;
+    border-radius: 25px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+
+/* KALENDER */
+.calendar h3 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #ff5c8a;
+    margin-bottom: 10px;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.days span {
+    padding: 6px;
+    border-radius: 8px;
+    .days span:nth-child(10),
+.days span:nth-child(31) {
+    color: #ff5c8a;
+    font-weight: bold;
+}
+
+}
+
+.birthday {
+    background: #ff5c8a;
+    color: white;
+    font-weight: bold;
+}
+
+/* SPOTIFY PLAYER */
+.spotify-player {
+    background: #121212;
+    color: white;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 25px 0;
+}
+
+.spotify-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cover {
+    width: 50px;
+    height: 50px;
+    background-image: url('image.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+
+.song-title {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.artist {
+    font-size: 12px;
+    color: #b3b3b3;
+}
+
+.spotify-player audio {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* UCAPAN */
+.wish-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: #4a2c35;
+    line-height: 1.9;
+    text-align: center;
+}
+
+.btn-next {
+    margin-top: 25px;
+    padding: 12px 28px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #ff8fb1, #ffc2d1);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    animation: pulse 2s infinite;
+}
+
+.btn-next {
+    margin-top: 25px;
+    padding: 12px 28px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #ff8fb1, #ffc2d1);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    animation: pulse 2s infinite;
+}
+
+.btn-next:hover {
+    transform: scale(1.08);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* ANIMASI HALUS */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* TOMBOL NAVIGASI BAWAH */
+.nav-bottom {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 99;
+}
+
+.nav-bottom button {
+    background: linear-gradient(135deg, #ff8fb1, #ffc2d1);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(255, 143, 177, 0.4);
+    transition: 0.3s;
+}
+
+.nav-bottom button:hover {
+    transform: scale(1.05);
+}

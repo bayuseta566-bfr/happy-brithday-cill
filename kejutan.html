@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>puzzle 🎲</title>
+    <link rel="stylesheet" href="kejutan.css">
+</head>
+<body>
+
+<!-- PARTY POPPER -->
+<div class="popper left"></div>
+<div class="popper right"></div>
+
+<!-- KADO -->
+<div class="gift-box" onclick="openGift()">
+    <div class="lid"></div>
+    <div class="ribbon"></div>
+    <p class="gift-text">Klik Kadonya 🎁</p>
+</div>
+
+<!-- PUZZLE -->
+<div class="puzzle-container hidden">
+    <h2>Susun Kucingnya untuk lanjutt 🌸</h2>
+    <div id="puzzle"></div>
+
+    <button id="nextBtn" onclick="goNext()" class="hidden">
+        Next 💕
+    </button>
+</div>
+
+<script src="kejutan.js"></script>
+</body>
+</html>

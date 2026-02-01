@@ -1,0 +1,76 @@
+/* ==============================
+   GLOBAL RESPONSIVE LOCK
+   ============================== */
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Quicksand', sans-serif;
+    background: #ffe6ef;
+}
+
+/* CENTER & LOCK LAYOUT */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MAIN APP CONTAINER */
+.app {
+    width: 100%;
+    max-width: 430px;      /* ukuran aman semua device */
+    height: 100vh;
+    max-height: 900px;
+    background: #fff0f6;
+    border-radius: 24px;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    overflow-y: auto;
+}
+
+/* TEXT SAFE SCALE */
+p, h1, h2, h3 {
+    font-size: clamp(14px, 2.5vw, 16px);
+    line-height: 1.8;
+}
+
+/* IMAGE SAFE */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* FIXED NAV BUTTON */
+.btn-back, .btn-next {
+    position: absolute;
+    bottom: 15px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff8fb1, #ffc2d1);
+    color: white;
+    z-index: 99;
+}
+
+.btn-back { left: 15px; }
+.btn-next { right: 15px; }
+
+/* MOBILE ONLY */
+@media (max-width: 480px) {
+    .app {
+        border-radius: 0;
+    }
+}

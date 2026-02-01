@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+
+    background:
+        radial-gradient(circle at top, #fff0f6, #ffd1e3),
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ff8fb1' fill-opacity='0.12'%3E%3Cpath d='M30 12c6 0 12 6 12 12s-6 12-12 12-12-6-12-12 6-12 12-12z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+
+.page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* JUDUL */
+.title {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: #a12850;
+}
+
+.subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: #6b1c3b;
+}
+
+/* JAR */
+.jar-container {
+    position: relative;
+}
+
+.jar {
+    width: 220px;
+    height: 300px;
+    border: 4px solid #ff8fb1;
+    border-radius: 0 0 30px 30px;
+    background: rgba(255,255,255,0.6);
+    position: relative;
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.jar::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    width: 120px;
+    height: 30px;
+    background: #ff8fb1;
+    border-radius: 10px;
+}
+
+/* PAPER */
+.paper {
+    width: 40px;
+    height: 60px;
+    background: #fff;
+    border-radius: 8px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    position: relative;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+/* saat keluar */
+.paper.out {
+    transform: translateY(-180px) rotate(-8deg) scale(1.1);
+    z-index: 5;
+}
+
+
+/* WISH BOX */
+.wish-box {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    z-index: 9999;           /* 🔥 PALING ATAS */
+    pointer-events: auto;
+}
+
+.heart,
+.float {
+    z-index: 0;
+    pointer-events: none;
+}
+
+.jar-container {
+    position: relative;
+    z-index: 5;
+}
+
+.jar {
+    position: relative;
+    z-index: 6;
+}
+
+.paper {
+    position: relative;
+    z-index: 7;
+}
+
+.paper.out {
+    z-index: 8;
+}
+
+
+.wish-box p {
+    background: #fff0f6;
+    padding: 30px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    line-height: 1.8;
+    color: #4a2c35;
+    animation: unfold 0.6s ease;
+}
+
+.wish-box button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background: #ff8fb1;
+    color: white;
+    cursor: pointer;
+}
+
+/* ANIMASI */
+@keyframes unfold {
+    from {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    to {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+/* UTIL */
+.hidden {
+    display: none;
+}
+
+/* BACK */
+.back-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 18px;
+    border-radius: 25px;
+    border: none;
+    background: rgba(255,255,255,0.6);
+    cursor: pointer;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+
+    background:
+        radial-gradient(circle at top, #ffe6ef, #ffc2d1),
+        url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ff8fb1' fill-opacity='0.15'%3E%3Cpath d='M20 0c5 0 10 5 10 10s-5 10-10 10S10 15 10 10 15 0 20 0z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.heart {
+    position: fixed;
+    font-size: 18px;
+    animation: floatUp 3s linear forwards;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-200px) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.float {
+    position: fixed;
+    top: -10vh;
+    z-index: 1; /* background layer */
+    pointer-events: none;
+    opacity: 0.7;
+    animation: floatBG linear infinite;
+}
+
+
+@keyframes floatBG {
+    from {
+        transform: translateY(110vh) rotate(0deg);
+    }
+    to {
+        transform: translateY(-10vh) rotate(360deg);
+    }
+}
