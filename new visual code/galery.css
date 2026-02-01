@@ -1,0 +1,197 @@
+/* HALAMAN GALLERY */
+.gallery-container {
+    background: #fff0f6;
+    padding: 30px;
+    margin-left: 50px;
+    border-radius: 25px;
+    width: 90%;
+    max-width: 90%;
+    text-align: center;
+    position: relative; 
+}
+
+.gallery-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 42px;
+    color: #ff5c8a;
+    margin-bottom: 30px;
+}
+
+/* AREA FOTO */
+.photo-area {
+    position: relative;
+    height: 450px;
+}
+
+/* FRAME FOTO */
+.photo-frame {
+    width: 140px;
+    height: 140px;
+    border: 6px solid #ff9ebb;
+    border-radius: 18px;
+    background-image: url(foto);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* FOTO PER FRAME */
+.p1  { background-image: url(2.jpeg); }
+.p2  { background-image: url(1.jpeg); }
+.p3  { background-image: url(3.jpeg); }
+.p4  { background-image: url(4.jpeg); }
+.p5  { background-image: url(5.jpeg); }
+.p6  { background-image: url(6.jpeg); }
+.p7  { background-image: url(7.jpeg); }
+.p8  { background-image: url(8.jpeg); }
+.p9  { background-image: url(9.jpeg); }
+.p10 { background-image: url(10.jpeg); }
+.p11 { background-image: url(11.jpeg); }
+.p12 { background-image: url(12.jpeg); }
+
+
+/* POSISI ACAK 12 FOTO */
+.p1  { top: 20px;  left: 30px;  transform: rotate(-6deg); }
+.p2  { top: 90px;  right: 40px; transform: rotate(5deg); }
+.p3  { top: 220px; left: 120px; transform: rotate(3deg); }
+.p4  { top: 300px; right: 160px;transform: rotate(-5deg); }
+
+.p5  { top: 150px; left: 320px; transform: rotate(2deg); }
+.p6  { top: 40px;  left: 520px; transform: rotate(-4deg); }
+.p7  { top: 260px; left: 520px; transform: rotate(6deg); }
+
+.p8  { top: 360px; left: 60px;  transform: rotate(-3deg); }
+.p9  { top: 400px; right: 80px; transform: rotate(4deg); }
+
+.p10 { top: 110px; left: 720px; transform: rotate(-6deg); }
+.p11 { top: 250px; left: 720px; transform: rotate(5deg); }
+.p12 { top: 300px; left: 360px; transform: rotate(-2deg); }
+
+
+/* HIASAN */
+.decor {
+    position: absolute;
+    font-size: 40px;
+}
+
+.decor-left {
+    top: 20px;
+    left: -10px;
+}
+
+.decor-right {
+    top: 20px;
+    right: -10px;
+}
+
+/* KUTIPAN */
+.quote {
+    margin-top: 40px;
+    font-style: italic;
+    color: #7a3b4a;
+    font-size: 15px;
+}
+
+.frame:hover img {
+    transform: scale(1.1);
+}
+
+/* ANIMASI GERAK */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+
+/* POPUP */
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.popup-content {
+    background: white;
+    width: 300px;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 12px;
+    animation: zoom 0.3s ease;
+}
+
+@keyframes zoom {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* TOMBOL NAVIGASI BAWAH */
+/* NAVIGATION BUTTONS */
+.nav-btn {
+    position: fixed;
+    bottom: 20px;
+
+    padding: 10px 22px;
+    border-radius: 30px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+
+    background: rgba(200, 67, 142, 0.674);
+    color: rgb(208, 199, 204);
+
+    border: 1px solid rgba(255,255,255,0.4);
+    backdrop-filter: blur(8px);
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.nav-btn:hover {
+    background: rgb(232, 68, 150);
+    transform: translateY(-2px);
+}
+
+/* POSISI */
+.nav-left {
+    left: 20px;
+}
+
+.nav-right {
+    right: 20px;
+}
+
+.btn-photobooth {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #ff8fb1, #ffc2d1);
+    color: white;
+    font-size: 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: 0.3s;
+    z-index: 100;
+    animation: pulse 2s infinite;
+}
+
+.btn-photobooth:hover {
+    transform: scale(1.05);
+}
+
+/* efek lembut */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255,143,177,0.5); }
+    70% { box-shadow: 0 0 0 8px rgba(255,143,177,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,143,177,0); }
+}

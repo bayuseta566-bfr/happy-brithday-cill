@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kucing dari Kardus 🎁🐱</title>
+    <link rel="stylesheet" href="box.css">
+</head>
+<body>
+
+<div class="scene">
+    <div class="box" id="box">
+        <div class="box-lid" id="lid"></div>
+        <div class="box-body"></div>
+
+        <!-- KUCING -->
+        <div class="cat hidden" id="cat">
+            <div class="cat-ear left"></div>
+            <div class="cat-ear right"></div>
+            <div class="cat-face">
+                <div class="eye left"></div>
+                <div class="eye right"></div>
+                <div class="nose"></div>
+            </div>
+        </div>
+    </div>
+
+    <p class="message hidden" id="message">
+        🎉 Happy Birthday Bocill 🎉<br>
+        dari kucing lucu yang keluar dari kardus 🐾
+    </p>
+
+    <button class="open-btn" onclick="openBox()">Buka Kardus 🎁</button>
+    <button class="back-menu" onclick="goMenu()">⬅ Kembali ke Menu</button>
+</div>
+
+<script src="box.js"></script>
+</body>
+</html>

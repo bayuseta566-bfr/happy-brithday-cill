@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photobooth 🎀</title>
+
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="photobooth.css">
+</head>
+<body>
+
+<div class="app photobooth">
+    <!-- DECORATIONS -->
+<div class="decor camera">📷</div>
+<div class="decor flash">✨</div>
+<div class="decor heart">💖</div>
+<div class="decor tape-left">📎</div>
+<div class="decor tape-right">📎</div>
+
+
+    <h2 class="title">Photobooth Rani Rianaa 📸</h2>
+
+    <div class="video-frame">
+    <video id="video" autoplay playsinline></video>
+</div>
+
+
+    <div class="controls">
+        <select id="count">
+            <option value="3">3 Foto</option>
+            <option value="4">4 Foto</option>
+            <option value="6">6 Foto</option>
+        </select>
+
+        <select id="filter">
+            <option value="none">Normal</option>
+            <option value="grayscale(100%)">B&W</option>
+            <option value="sepia(100%)">Sepia</option>
+            <option value="contrast(1.1) saturate(0.8)">Vintage</option>
+            <option value="brightness(1.1) saturate(1.2)">Warm</option>
+        </select>
+    </div>
+
+    <button class="capture-btn" onclick="startCapture()">📸 Ambil Foto</button>
+
+    <p id="timer" class="timer"></p>
+
+    <canvas id="canvas"></canvas>
+
+    <a id="download" class="download hidden" download="photobooth.png">
+        ⬇️ Unduh Hasil Foto
+    </a>
+
+    <button class="btn-back" onclick="location.href='menu.html'">⬅ Beranda</button>
+
+</div>
+
+<script src="photobooth.js"></script>
+</body>
+</html>

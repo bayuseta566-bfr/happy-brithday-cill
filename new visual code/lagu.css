@@ -1,0 +1,139 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom, #1e1e1e, #000);
+    color: white;
+
+    height: 100vh;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* HIASAN ANIMASI */
+.decoration span {
+    position: fixed;
+    font-size: 22px;
+    animation: float 8s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-10vh); opacity: 0; }
+}
+
+.decoration span:nth-child(1) { left: 10%; animation-delay: 0s; }
+.decoration span:nth-child(2) { left: 30%; animation-delay: 2s; }
+.decoration span:nth-child(3) { left: 50%; animation-delay: 4s; }
+.decoration span:nth-child(4) { left: 70%; animation-delay: 1s; }
+.decoration span:nth-child(5) { left: 90%; animation-delay: 3s; }
+
+/* PLAYER */
+   .player {
+    width: 100%;
+    max-width: 380px;
+    padding: 16px;
+
+    max-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+/* FOTO COVER */
+.cover {
+    width: 100%;
+    height:260px;
+    background-image: url('12\ \(2\).jpeg'); /* GANTI FOTO DI SINI */
+    background-size: cover;
+    background-position: center;
+    border-radius: 14px;
+    margin-bottom: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* INFO LAGU */
+.song-info {
+    text-align: center;
+}
+
+.song-info h2 {
+    margin: 5px 0;
+    font-size: 20px;
+}
+
+.song-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #b3b3b3;
+}
+
+/* AUDIO */
+audio {
+    width: 100%;
+    margin-top: 18px;
+}
+
+/* KONTROL */
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.controls button {
+    background: white;
+    color: black;
+    border: none;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* PUISI */
+.poem {
+    max-height: 100%;
+    max-width: 180%;
+    overflow: hidden;
+    margin-top: 20px;
+    padding: 18px 24px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 15px;
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    line-height: 1.9;
+    text-align: center;
+    color: #ffd6e8;
+    overflow-y: auto;
+    
+}
+
+/* KEMBALI */
+.back-btn {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.back-btn button {
+    background: transparent;
+    border: 1px solid #fff;
+    color: white;
+    padding: 9px 22px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+}
